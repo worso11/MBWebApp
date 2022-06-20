@@ -76,6 +76,28 @@ class MyGraph(pgv.AGraph):
             if event not in direct_succession.keys():
                 direct_succession[event] = set()
         return dict(direct_succession)
+    
+    def get_direct_succession_count(self, trace):
+        direct_succession_count = defaultdict(int)
+        for case in trace:
+            for index, event in enumerate(case):
+                if (index > 0):
+                    if (direct_succession_count[case[index-1] + event] == None):
+                        direct_succession_count[case[index-1] + event] = 1
+                    else:
+                        direct_succession_count[case[index-1] + event] += 1
+        return dict(direct_succession_count)
+    
+    def filter_trace_lowerbound(self, trace, direct_succession_count, lowerbound):
+        for i, case in enumerate(trace):
+            removed = True
+            for index, event in enumerate(case):
+                if (index > 0):
+                    if (direct_succession_count[case[index-1] + event] > lowerbound):
+                        removed = False
+            if (removed):
+                trace[i] = None
+        return trace
 
     def add_edge(self, source, target):
         super(MyGraph, self).add_edge(source, target)
@@ -302,6 +324,9 @@ class MyGraph(pgv.AGraph):
         else:
             print("Provide direct succession or csv/xes file!")
             return
+
+        print(trace)
+        print(events)
 
         # getting start set events
         start_set_events = self.get_start_set_events(direct_succession)

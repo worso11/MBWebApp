@@ -1,4 +1,35 @@
 <!doctype html>
+
+<style>
+  
+.rangeslider{
+    width: 50%;
+}
+  
+.myslider {
+    -webkit-appearance: none;
+    background: #FCF3CF  ;
+    width: 50%;
+    height: 20px;
+    opacity: 2;
+   }
+  
+  
+.myslider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    cursor: pointer;
+    background: #34495E  ;
+    width: 5%;
+    height: 20px;
+}
+  
+  
+.myslider:hover {
+    opacity: 1;
+}
+  
+</style>
+
 <title>Modelowanie biznesowe - lab 3 i 4</title>
 <h2>Select a model file to upload</h2>
 <p>
@@ -13,9 +44,28 @@
 	{% endwith %}
 </p>
 {% if filename %}
+    <form method="post" action="/filtered" enctype="multipart/form-data">
+        <div class="rangeslider">
+          <input type="range" min="0" max="10" value="0"
+                          class="myslider" id="sliderRange" name="filter">
+          <input type="submit" value="Filter">
+          <p>Value: <span id="slider"></span></p>
+        </div>
+    </form>
 	<div>
 		<img src="{{ filename }}">
 	</div>
+	
+	<script>
+    var rangeslider = document.getElementById("sliderRange");
+    var output = document.getElementById("slider");
+    output.innerHTML = rangeslider.value;
+      
+    rangeslider.oninput = function() {
+      output.innerHTML = this.value;
+    }
+    </script>
+	
 {% endif %}
 <form method="post" action="/" enctype="multipart/form-data">
     <dl>

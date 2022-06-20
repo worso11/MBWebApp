@@ -14,7 +14,7 @@
 	<global scope="event">
 		<string key="concept:name" value="name"/>
 		<string key="lifecycle:transition" value="transition"/>
-		<date key="time:timestamp" value="2021-10-26T15:08:45.768+02:00"/>
+		<date key="time:timestamp" value="2021-10-26T15:09:44.463+02:00"/>
 		<string key="Activity" value="string"/>
 	</global>
 	<classifier name="Activity" keys="Activity"/>
@@ -39,28 +39,34 @@
 			<string key="Activity" value="b"/>
 		</event>
 		<event>
-			<string key="concept:name" value="c"/>
-			<string key="lifecycle:transition" value="complete"/>
-			<date key="time:timestamp" value="2021-04-01T22:12:00.000+02:00"/>
-			<string key="Activity" value="c"/>
-		</event>
-		<event>
-			<string key="concept:name" value="d"/>
-			<string key="lifecycle:transition" value="complete"/>
-			<date key="time:timestamp" value="2021-04-01T22:13:00.000+02:00"/>
-			<string key="Activity" value="d"/>
-		</event>
-		<event>
 			<string key="concept:name" value="e"/>
 			<string key="lifecycle:transition" value="complete"/>
-			<date key="time:timestamp" value="2021-04-01T22:14:00.000+02:00"/>
+			<date key="time:timestamp" value="2021-04-01T22:12:00.000+02:00"/>
 			<string key="Activity" value="e"/>
+		</event>
+		<event>
+			<string key="concept:name" value="f"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2021-04-01T22:13:00.000+02:00"/>
+			<string key="Activity" value="f"/>
 		</event>
 		<event>
 			<string key="concept:name" value="g"/>
 			<string key="lifecycle:transition" value="complete"/>
-			<date key="time:timestamp" value="2021-04-01T22:15:00.000+02:00"/>
+			<date key="time:timestamp" value="2021-04-01T22:14:00.000+02:00"/>
 			<string key="Activity" value="g"/>
+		</event>
+		<event>
+			<string key="concept:name" value="h"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2021-04-01T22:15:00.000+02:00"/>
+			<string key="Activity" value="h"/>
+		</event>
+		<event>
+			<string key="concept:name" value="i"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2021-04-01T22:16:00.000+02:00"/>
+			<string key="Activity" value="i"/>
 		</event>
 	</trace>
 	<trace>
@@ -75,34 +81,40 @@
 			<string key="Activity" value="a"/>
 		</event>
 		<event>
-			<string key="concept:name" value="b"/>
-			<string key="lifecycle:transition" value="complete"/>
-			<date key="time:timestamp" value="2021-04-01T22:11:00.000+02:00"/>
-			<string key="Activity" value="b"/>
-		</event>
-		<event>
 			<string key="concept:name" value="c"/>
 			<string key="lifecycle:transition" value="complete"/>
-			<date key="time:timestamp" value="2021-04-01T22:12:00.000+02:00"/>
+			<date key="time:timestamp" value="2021-04-01T22:11:00.000+02:00"/>
 			<string key="Activity" value="c"/>
 		</event>
 		<event>
-			<string key="concept:name" value="d"/>
+			<string key="concept:name" value="e"/>
 			<string key="lifecycle:transition" value="complete"/>
-			<date key="time:timestamp" value="2021-04-01T22:13:00.000+02:00"/>
-			<string key="Activity" value="d"/>
+			<date key="time:timestamp" value="2021-04-01T22:12:00.000+02:00"/>
+			<string key="Activity" value="e"/>
 		</event>
 		<event>
 			<string key="concept:name" value="f"/>
 			<string key="lifecycle:transition" value="complete"/>
-			<date key="time:timestamp" value="2021-04-01T22:14:00.000+02:00"/>
+			<date key="time:timestamp" value="2021-04-01T22:13:00.000+02:00"/>
 			<string key="Activity" value="f"/>
 		</event>
 		<event>
 			<string key="concept:name" value="g"/>
 			<string key="lifecycle:transition" value="complete"/>
-			<date key="time:timestamp" value="2021-04-01T22:15:00.000+02:00"/>
+			<date key="time:timestamp" value="2021-04-01T22:14:00.000+02:00"/>
 			<string key="Activity" value="g"/>
+		</event>
+		<event>
+			<string key="concept:name" value="h"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2021-04-01T22:15:00.000+02:00"/>
+			<string key="Activity" value="h"/>
+		</event>
+		<event>
+			<string key="concept:name" value="i"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2021-04-01T22:16:00.000+02:00"/>
+			<string key="Activity" value="i"/>
 		</event>
 	</trace>
 	<trace>
@@ -117,34 +129,40 @@
 			<string key="Activity" value="a"/>
 		</event>
 		<event>
-			<string key="concept:name" value="c"/>
-			<string key="lifecycle:transition" value="complete"/>
-			<date key="time:timestamp" value="2021-04-01T22:11:00.000+02:00"/>
-			<string key="Activity" value="c"/>
-		</event>
-		<event>
-			<string key="concept:name" value="b"/>
-			<string key="lifecycle:transition" value="complete"/>
-			<date key="time:timestamp" value="2021-04-01T22:12:00.000+02:00"/>
-			<string key="Activity" value="b"/>
-		</event>
-		<event>
 			<string key="concept:name" value="d"/>
 			<string key="lifecycle:transition" value="complete"/>
-			<date key="time:timestamp" value="2021-04-01T22:13:00.000+02:00"/>
+			<date key="time:timestamp" value="2021-04-01T22:11:00.000+02:00"/>
 			<string key="Activity" value="d"/>
 		</event>
 		<event>
 			<string key="concept:name" value="e"/>
 			<string key="lifecycle:transition" value="complete"/>
-			<date key="time:timestamp" value="2021-04-01T22:14:00.000+02:00"/>
+			<date key="time:timestamp" value="2021-04-01T22:12:00.000+02:00"/>
 			<string key="Activity" value="e"/>
+		</event>
+		<event>
+			<string key="concept:name" value="f"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2021-04-01T22:13:00.000+02:00"/>
+			<string key="Activity" value="f"/>
 		</event>
 		<event>
 			<string key="concept:name" value="g"/>
 			<string key="lifecycle:transition" value="complete"/>
-			<date key="time:timestamp" value="2021-04-01T22:15:00.000+02:00"/>
+			<date key="time:timestamp" value="2021-04-01T22:14:00.000+02:00"/>
 			<string key="Activity" value="g"/>
+		</event>
+		<event>
+			<string key="concept:name" value="h"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2021-04-01T22:15:00.000+02:00"/>
+			<string key="Activity" value="h"/>
+		</event>
+		<event>
+			<string key="concept:name" value="i"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2021-04-01T22:16:00.000+02:00"/>
+			<string key="Activity" value="i"/>
 		</event>
 	</trace>
 	<trace>
@@ -159,22 +177,598 @@
 			<string key="Activity" value="a"/>
 		</event>
 		<event>
+			<string key="concept:name" value="b"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2021-04-01T22:11:00.000+02:00"/>
+			<string key="Activity" value="b"/>
+		</event>
+		<event>
+			<string key="concept:name" value="e"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2021-04-01T22:12:00.000+02:00"/>
+			<string key="Activity" value="e"/>
+		</event>
+		<event>
+			<string key="concept:name" value="f"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2021-04-01T22:13:00.000+02:00"/>
+			<string key="Activity" value="f"/>
+		</event>
+		<event>
+			<string key="concept:name" value="h"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2021-04-01T22:14:00.000+02:00"/>
+			<string key="Activity" value="h"/>
+		</event>
+		<event>
+			<string key="concept:name" value="g"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2021-04-01T22:15:00.000+02:00"/>
+			<string key="Activity" value="g"/>
+		</event>
+		<event>
+			<string key="concept:name" value="i"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2021-04-01T22:16:00.000+02:00"/>
+			<string key="Activity" value="i"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="5"/>
+		<string key="variant" value="Variant 5"/>
+		<int key="variant-index" value="5"/>
+		<string key="creator" value="Fluxicon Disco"/>
+		<event>
+			<string key="concept:name" value="a"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2021-04-01T22:10:00.000+02:00"/>
+			<string key="Activity" value="a"/>
+		</event>
+		<event>
 			<string key="concept:name" value="c"/>
 			<string key="lifecycle:transition" value="complete"/>
 			<date key="time:timestamp" value="2021-04-01T22:11:00.000+02:00"/>
 			<string key="Activity" value="c"/>
 		</event>
 		<event>
-			<string key="concept:name" value="b"/>
+			<string key="concept:name" value="e"/>
 			<string key="lifecycle:transition" value="complete"/>
 			<date key="time:timestamp" value="2021-04-01T22:12:00.000+02:00"/>
-			<string key="Activity" value="b"/>
+			<string key="Activity" value="e"/>
+		</event>
+		<event>
+			<string key="concept:name" value="f"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2021-04-01T22:13:00.000+02:00"/>
+			<string key="Activity" value="f"/>
+		</event>
+		<event>
+			<string key="concept:name" value="h"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2021-04-01T22:14:00.000+02:00"/>
+			<string key="Activity" value="h"/>
+		</event>
+		<event>
+			<string key="concept:name" value="g"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2021-04-01T22:15:00.000+02:00"/>
+			<string key="Activity" value="g"/>
+		</event>
+		<event>
+			<string key="concept:name" value="i"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2021-04-01T22:16:00.000+02:00"/>
+			<string key="Activity" value="i"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="6"/>
+		<string key="variant" value="Variant 6"/>
+		<int key="variant-index" value="6"/>
+		<string key="creator" value="Fluxicon Disco"/>
+		<event>
+			<string key="concept:name" value="a"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2021-04-01T22:10:00.000+02:00"/>
+			<string key="Activity" value="a"/>
 		</event>
 		<event>
 			<string key="concept:name" value="d"/>
 			<string key="lifecycle:transition" value="complete"/>
-			<date key="time:timestamp" value="2021-04-01T22:13:00.000+02:00"/>
+			<date key="time:timestamp" value="2021-04-01T22:11:00.000+02:00"/>
 			<string key="Activity" value="d"/>
+		</event>
+		<event>
+			<string key="concept:name" value="e"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2021-04-01T22:12:00.000+02:00"/>
+			<string key="Activity" value="e"/>
+		</event>
+		<event>
+			<string key="concept:name" value="f"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2021-04-01T22:13:00.000+02:00"/>
+			<string key="Activity" value="f"/>
+		</event>
+		<event>
+			<string key="concept:name" value="h"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2021-04-01T22:14:00.000+02:00"/>
+			<string key="Activity" value="h"/>
+		</event>
+		<event>
+			<string key="concept:name" value="g"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2021-04-01T22:15:00.000+02:00"/>
+			<string key="Activity" value="g"/>
+		</event>
+		<event>
+			<string key="concept:name" value="i"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2021-04-01T22:16:00.000+02:00"/>
+			<string key="Activity" value="i"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="7"/>
+		<string key="variant" value="Variant 7"/>
+		<int key="variant-index" value="7"/>
+		<string key="creator" value="Fluxicon Disco"/>
+		<event>
+			<string key="concept:name" value="a"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2021-04-01T22:10:00.000+02:00"/>
+			<string key="Activity" value="a"/>
+		</event>
+		<event>
+			<string key="concept:name" value="b"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2021-04-01T22:11:00.000+02:00"/>
+			<string key="Activity" value="b"/>
+		</event>
+		<event>
+			<string key="concept:name" value="e"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2021-04-01T22:12:00.000+02:00"/>
+			<string key="Activity" value="e"/>
+		</event>
+		<event>
+			<string key="concept:name" value="g"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2021-04-01T22:13:00.000+02:00"/>
+			<string key="Activity" value="g"/>
+		</event>
+		<event>
+			<string key="concept:name" value="f"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2021-04-01T22:14:00.000+02:00"/>
+			<string key="Activity" value="f"/>
+		</event>
+		<event>
+			<string key="concept:name" value="h"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2021-04-01T22:15:00.000+02:00"/>
+			<string key="Activity" value="h"/>
+		</event>
+		<event>
+			<string key="concept:name" value="i"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2021-04-01T22:16:00.000+02:00"/>
+			<string key="Activity" value="i"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="8"/>
+		<string key="variant" value="Variant 8"/>
+		<int key="variant-index" value="8"/>
+		<string key="creator" value="Fluxicon Disco"/>
+		<event>
+			<string key="concept:name" value="a"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2021-04-01T22:10:00.000+02:00"/>
+			<string key="Activity" value="a"/>
+		</event>
+		<event>
+			<string key="concept:name" value="c"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2021-04-01T22:11:00.000+02:00"/>
+			<string key="Activity" value="c"/>
+		</event>
+		<event>
+			<string key="concept:name" value="e"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2021-04-01T22:12:00.000+02:00"/>
+			<string key="Activity" value="e"/>
+		</event>
+		<event>
+			<string key="concept:name" value="g"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2021-04-01T22:13:00.000+02:00"/>
+			<string key="Activity" value="g"/>
+		</event>
+		<event>
+			<string key="concept:name" value="f"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2021-04-01T22:14:00.000+02:00"/>
+			<string key="Activity" value="f"/>
+		</event>
+		<event>
+			<string key="concept:name" value="h"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2021-04-01T22:15:00.000+02:00"/>
+			<string key="Activity" value="h"/>
+		</event>
+		<event>
+			<string key="concept:name" value="i"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2021-04-01T22:16:00.000+02:00"/>
+			<string key="Activity" value="i"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="9"/>
+		<string key="variant" value="Variant 9"/>
+		<int key="variant-index" value="9"/>
+		<string key="creator" value="Fluxicon Disco"/>
+		<event>
+			<string key="concept:name" value="a"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2021-04-01T22:10:00.000+02:00"/>
+			<string key="Activity" value="a"/>
+		</event>
+		<event>
+			<string key="concept:name" value="d"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2021-04-01T22:11:00.000+02:00"/>
+			<string key="Activity" value="d"/>
+		</event>
+		<event>
+			<string key="concept:name" value="e"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2021-04-01T22:12:00.000+02:00"/>
+			<string key="Activity" value="e"/>
+		</event>
+		<event>
+			<string key="concept:name" value="g"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2021-04-01T22:13:00.000+02:00"/>
+			<string key="Activity" value="g"/>
+		</event>
+		<event>
+			<string key="concept:name" value="f"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2021-04-01T22:14:00.000+02:00"/>
+			<string key="Activity" value="f"/>
+		</event>
+		<event>
+			<string key="concept:name" value="h"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2021-04-01T22:15:00.000+02:00"/>
+			<string key="Activity" value="h"/>
+		</event>
+		<event>
+			<string key="concept:name" value="i"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2021-04-01T22:16:00.000+02:00"/>
+			<string key="Activity" value="i"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="10"/>
+		<string key="variant" value="Variant 10"/>
+		<int key="variant-index" value="10"/>
+		<string key="creator" value="Fluxicon Disco"/>
+		<event>
+			<string key="concept:name" value="a"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2021-04-01T22:10:00.000+02:00"/>
+			<string key="Activity" value="a"/>
+		</event>
+		<event>
+			<string key="concept:name" value="b"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2021-04-01T22:11:00.000+02:00"/>
+			<string key="Activity" value="b"/>
+		</event>
+		<event>
+			<string key="concept:name" value="e"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2021-04-01T22:12:00.000+02:00"/>
+			<string key="Activity" value="e"/>
+		</event>
+		<event>
+			<string key="concept:name" value="g"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2021-04-01T22:13:00.000+02:00"/>
+			<string key="Activity" value="g"/>
+		</event>
+		<event>
+			<string key="concept:name" value="h"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2021-04-01T22:14:00.000+02:00"/>
+			<string key="Activity" value="h"/>
+		</event>
+		<event>
+			<string key="concept:name" value="f"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2021-04-01T22:15:00.000+02:00"/>
+			<string key="Activity" value="f"/>
+		</event>
+		<event>
+			<string key="concept:name" value="i"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2021-04-01T22:16:00.000+02:00"/>
+			<string key="Activity" value="i"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="11"/>
+		<string key="variant" value="Variant 11"/>
+		<int key="variant-index" value="11"/>
+		<string key="creator" value="Fluxicon Disco"/>
+		<event>
+			<string key="concept:name" value="a"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2021-04-01T22:10:00.000+02:00"/>
+			<string key="Activity" value="a"/>
+		</event>
+		<event>
+			<string key="concept:name" value="c"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2021-04-01T22:11:00.000+02:00"/>
+			<string key="Activity" value="c"/>
+		</event>
+		<event>
+			<string key="concept:name" value="e"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2021-04-01T22:12:00.000+02:00"/>
+			<string key="Activity" value="e"/>
+		</event>
+		<event>
+			<string key="concept:name" value="g"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2021-04-01T22:13:00.000+02:00"/>
+			<string key="Activity" value="g"/>
+		</event>
+		<event>
+			<string key="concept:name" value="h"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2021-04-01T22:14:00.000+02:00"/>
+			<string key="Activity" value="h"/>
+		</event>
+		<event>
+			<string key="concept:name" value="f"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2021-04-01T22:15:00.000+02:00"/>
+			<string key="Activity" value="f"/>
+		</event>
+		<event>
+			<string key="concept:name" value="i"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2021-04-01T22:16:00.000+02:00"/>
+			<string key="Activity" value="i"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="12"/>
+		<string key="variant" value="Variant 12"/>
+		<int key="variant-index" value="12"/>
+		<string key="creator" value="Fluxicon Disco"/>
+		<event>
+			<string key="concept:name" value="a"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2021-04-01T22:10:00.000+02:00"/>
+			<string key="Activity" value="a"/>
+		</event>
+		<event>
+			<string key="concept:name" value="d"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2021-04-01T22:11:00.000+02:00"/>
+			<string key="Activity" value="d"/>
+		</event>
+		<event>
+			<string key="concept:name" value="e"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2021-04-01T22:12:00.000+02:00"/>
+			<string key="Activity" value="e"/>
+		</event>
+		<event>
+			<string key="concept:name" value="g"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2021-04-01T22:13:00.000+02:00"/>
+			<string key="Activity" value="g"/>
+		</event>
+		<event>
+			<string key="concept:name" value="h"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2021-04-01T22:14:00.000+02:00"/>
+			<string key="Activity" value="h"/>
+		</event>
+		<event>
+			<string key="concept:name" value="f"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2021-04-01T22:15:00.000+02:00"/>
+			<string key="Activity" value="f"/>
+		</event>
+		<event>
+			<string key="concept:name" value="i"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2021-04-01T22:16:00.000+02:00"/>
+			<string key="Activity" value="i"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="13"/>
+		<string key="variant" value="Variant 13"/>
+		<int key="variant-index" value="13"/>
+		<string key="creator" value="Fluxicon Disco"/>
+		<event>
+			<string key="concept:name" value="a"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2021-04-01T22:10:00.000+02:00"/>
+			<string key="Activity" value="a"/>
+		</event>
+		<event>
+			<string key="concept:name" value="b"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2021-04-01T22:11:00.000+02:00"/>
+			<string key="Activity" value="b"/>
+		</event>
+		<event>
+			<string key="concept:name" value="e"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2021-04-01T22:12:00.000+02:00"/>
+			<string key="Activity" value="e"/>
+		</event>
+		<event>
+			<string key="concept:name" value="h"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2021-04-01T22:13:00.000+02:00"/>
+			<string key="Activity" value="h"/>
+		</event>
+		<event>
+			<string key="concept:name" value="g"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2021-04-01T22:14:00.000+02:00"/>
+			<string key="Activity" value="g"/>
+		</event>
+		<event>
+			<string key="concept:name" value="f"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2021-04-01T22:15:00.000+02:00"/>
+			<string key="Activity" value="f"/>
+		</event>
+		<event>
+			<string key="concept:name" value="i"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2021-04-01T22:16:00.000+02:00"/>
+			<string key="Activity" value="i"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="14"/>
+		<string key="variant" value="Variant 14"/>
+		<int key="variant-index" value="14"/>
+		<string key="creator" value="Fluxicon Disco"/>
+		<event>
+			<string key="concept:name" value="a"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2021-04-01T22:10:00.000+02:00"/>
+			<string key="Activity" value="a"/>
+		</event>
+		<event>
+			<string key="concept:name" value="c"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2021-04-01T22:11:00.000+02:00"/>
+			<string key="Activity" value="c"/>
+		</event>
+		<event>
+			<string key="concept:name" value="e"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2021-04-01T22:12:00.000+02:00"/>
+			<string key="Activity" value="e"/>
+		</event>
+		<event>
+			<string key="concept:name" value="h"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2021-04-01T22:13:00.000+02:00"/>
+			<string key="Activity" value="h"/>
+		</event>
+		<event>
+			<string key="concept:name" value="g"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2021-04-01T22:14:00.000+02:00"/>
+			<string key="Activity" value="g"/>
+		</event>
+		<event>
+			<string key="concept:name" value="f"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2021-04-01T22:15:00.000+02:00"/>
+			<string key="Activity" value="f"/>
+		</event>
+		<event>
+			<string key="concept:name" value="i"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2021-04-01T22:16:00.000+02:00"/>
+			<string key="Activity" value="i"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="15"/>
+		<string key="variant" value="Variant 15"/>
+		<int key="variant-index" value="15"/>
+		<string key="creator" value="Fluxicon Disco"/>
+		<event>
+			<string key="concept:name" value="a"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2021-04-01T22:10:00.000+02:00"/>
+			<string key="Activity" value="a"/>
+		</event>
+		<event>
+			<string key="concept:name" value="d"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2021-04-01T22:11:00.000+02:00"/>
+			<string key="Activity" value="d"/>
+		</event>
+		<event>
+			<string key="concept:name" value="e"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2021-04-01T22:12:00.000+02:00"/>
+			<string key="Activity" value="e"/>
+		</event>
+		<event>
+			<string key="concept:name" value="h"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2021-04-01T22:13:00.000+02:00"/>
+			<string key="Activity" value="h"/>
+		</event>
+		<event>
+			<string key="concept:name" value="g"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2021-04-01T22:14:00.000+02:00"/>
+			<string key="Activity" value="g"/>
+		</event>
+		<event>
+			<string key="concept:name" value="f"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2021-04-01T22:15:00.000+02:00"/>
+			<string key="Activity" value="f"/>
+		</event>
+		<event>
+			<string key="concept:name" value="i"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2021-04-01T22:16:00.000+02:00"/>
+			<string key="Activity" value="i"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="16"/>
+		<string key="variant" value="Variant 16"/>
+		<int key="variant-index" value="16"/>
+		<string key="creator" value="Fluxicon Disco"/>
+		<event>
+			<string key="concept:name" value="a"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2021-04-01T22:10:00.000+02:00"/>
+			<string key="Activity" value="a"/>
+		</event>
+		<event>
+			<string key="concept:name" value="b"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2021-04-01T22:11:00.000+02:00"/>
+			<string key="Activity" value="b"/>
+		</event>
+		<event>
+			<string key="concept:name" value="e"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2021-04-01T22:12:00.000+02:00"/>
+			<string key="Activity" value="e"/>
+		</event>
+		<event>
+			<string key="concept:name" value="h"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2021-04-01T22:13:00.000+02:00"/>
+			<string key="Activity" value="h"/>
 		</event>
 		<event>
 			<string key="concept:name" value="f"/>
@@ -187,6 +781,108 @@
 			<string key="lifecycle:transition" value="complete"/>
 			<date key="time:timestamp" value="2021-04-01T22:15:00.000+02:00"/>
 			<string key="Activity" value="g"/>
+		</event>
+		<event>
+			<string key="concept:name" value="i"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2021-04-01T22:16:00.000+02:00"/>
+			<string key="Activity" value="i"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="17"/>
+		<string key="variant" value="Variant 17"/>
+		<int key="variant-index" value="17"/>
+		<string key="creator" value="Fluxicon Disco"/>
+		<event>
+			<string key="concept:name" value="a"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2021-04-01T22:10:00.000+02:00"/>
+			<string key="Activity" value="a"/>
+		</event>
+		<event>
+			<string key="concept:name" value="c"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2021-04-01T22:11:00.000+02:00"/>
+			<string key="Activity" value="c"/>
+		</event>
+		<event>
+			<string key="concept:name" value="e"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2021-04-01T22:12:00.000+02:00"/>
+			<string key="Activity" value="e"/>
+		</event>
+		<event>
+			<string key="concept:name" value="h"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2021-04-01T22:13:00.000+02:00"/>
+			<string key="Activity" value="h"/>
+		</event>
+		<event>
+			<string key="concept:name" value="f"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2021-04-01T22:14:00.000+02:00"/>
+			<string key="Activity" value="f"/>
+		</event>
+		<event>
+			<string key="concept:name" value="g"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2021-04-01T22:15:00.000+02:00"/>
+			<string key="Activity" value="g"/>
+		</event>
+		<event>
+			<string key="concept:name" value="i"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2021-04-01T22:16:00.000+02:00"/>
+			<string key="Activity" value="i"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="18"/>
+		<string key="variant" value="Variant 18"/>
+		<int key="variant-index" value="18"/>
+		<string key="creator" value="Fluxicon Disco"/>
+		<event>
+			<string key="concept:name" value="a"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2021-04-01T22:10:00.000+02:00"/>
+			<string key="Activity" value="a"/>
+		</event>
+		<event>
+			<string key="concept:name" value="d"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2021-04-01T22:11:00.000+02:00"/>
+			<string key="Activity" value="d"/>
+		</event>
+		<event>
+			<string key="concept:name" value="e"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2021-04-01T22:12:00.000+02:00"/>
+			<string key="Activity" value="e"/>
+		</event>
+		<event>
+			<string key="concept:name" value="h"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2021-04-01T22:13:00.000+02:00"/>
+			<string key="Activity" value="h"/>
+		</event>
+		<event>
+			<string key="concept:name" value="f"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2021-04-01T22:14:00.000+02:00"/>
+			<string key="Activity" value="f"/>
+		</event>
+		<event>
+			<string key="concept:name" value="g"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2021-04-01T22:15:00.000+02:00"/>
+			<string key="Activity" value="g"/>
+		</event>
+		<event>
+			<string key="concept:name" value="i"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2021-04-01T22:16:00.000+02:00"/>
+			<string key="Activity" value="i"/>
 		</event>
 	</trace>
 </log>

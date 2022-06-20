@@ -4,6 +4,7 @@ from flask import Flask, flash, request, redirect, render_template
 from werkzeug.utils import secure_filename
 
 UPLOAD_FOLDER = 'static/'
+FILE_TYPE = "csv"
 
 app = Flask(__name__)
 app.secret_key = "secret key"
@@ -23,6 +24,8 @@ def upload_form():
 
 @app.route('/', methods=['POST'])
 def upload_image():
+    global FILE_TYPE
+    
     if 'file' not in request.files:
         flash('No file part')
         return redirect(request.url)
@@ -32,7 +35,8 @@ def upload_image():
         return redirect(request.url)
     if file and allowed_file(file.filename):
         filename_secure = secure_filename(file.filename)
-        filename = "simple_process_model." + filename_secure.split('.', 1)[1]
+        FILE_TYPE = filename_secure.split('.', 1)[1]
+        filename = "simple_process_model." + FILE_TYPE
         file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
         flash('Model successfully uploaded and displayed below')
         
@@ -45,6 +49,16 @@ def upload_image():
     else:
         flash('Allowed image types are -> csv, xes')
         return redirect(request.url)
+        
+@app.route('/filtered', methods=['POST'])
+def filter_model():
+    G = myGraph.MyGraph()
+    model_filename = os.path.join('static', "simple_process_model." + FILE_TYPE)
+    image_filename = os.path.join('static', "simple_process_model.png")
+    G.create_and_display_graph(image_filename, filename=model_filename)
+    
+    return render_template('upload.html', filename=image_filename)
+    
 
 @app.after_request
 def add_header(response):
