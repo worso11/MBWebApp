@@ -69,10 +69,14 @@ class MyGraph(pgv.AGraph):
     def get_direct_succession(self, trace, events):
         direct_succession = defaultdict(set)
         for case in trace:
+            if (case == None):
+                continue
             for index, event in enumerate(case):
                 if (index > 0):
                     direct_succession[case[index-1]].add(event)
         for event in events:
+            if (event == None):
+                continue
             if event not in direct_succession.keys():
                 direct_succession[event] = set()
         return dict(direct_succession)
@@ -93,11 +97,36 @@ class MyGraph(pgv.AGraph):
             removed = True
             for index, event in enumerate(case):
                 if (index > 0):
-                    if (direct_succession_count[case[index-1] + event] > lowerbound):
+                    if (direct_succession_count[case[index-1] + event] >= lowerbound):
                         removed = False
             if (removed):
                 trace[i] = None
         return trace
+    
+    def filter_trace_upperbound(self, trace, direct_succession_count, upperbound):
+        for i, case in enumerate(trace):
+            if (case == None):
+                continue
+            removed = False
+            for index, event in enumerate(case):
+                if (index > 0):
+                    if (direct_succession_count[case[index-1] + event] > upperbound):
+                        removed = True
+            if (removed):
+                trace[i] = None
+        return trace
+    
+    def remove_filtered_events(self, events, trace):
+        for i, event in enumerate(events):
+            exists = False
+            for case in trace:
+                if (case == None):
+                    continue
+                for evnt in case:
+                    if (evnt == event):
+                        exists = True
+            if not exists:
+                events[i] = None
 
     def add_edge(self, source, target):
         super(MyGraph, self).add_edge(source, target)
@@ -231,13 +260,15 @@ class MyGraph(pgv.AGraph):
     def get_start_set_events_from_trace(self, trace):
         start_set_events = set()
         for t in trace:
-            start_set_events.add(t[0])
+            if t != None:
+                start_set_events.add(t[0])
         return start_set_events
 
     def get_end_set_events_from_trace(self, trace):
         end_set_events = set()
         for t in trace:
-            end_set_events.add(t[len(t)-1])
+            if t != None:
+                end_set_events.add(t[len(t)-1])
         return end_set_events
 
     def get_end_set_events(self, direct_succession, parallel_events):
@@ -310,23 +341,31 @@ class MyGraph(pgv.AGraph):
 
       return
 
-    def create_and_display_graph(self, model_name, filename="", succession=None):
+    def create_and_display_graph(self, model_name, filename="", succession=None, lowerbound=0, upperbound=float('inf')):
         if succession == None and filename != "" and filename.endswith(".csv"):
             trace = self.get_trace_from_csv(filename)
             events = self.get_events_from_csv(filename)
+            direct_succession_count = self.get_direct_succession_count(trace)
+            self.filter_trace_lowerbound(trace, direct_succession_count, lowerbound)
+            self.filter_trace_upperbound(trace, direct_succession_count, upperbound)
+            self.remove_filtered_events(events, trace)
             direct_succession = self.get_direct_succession(trace, events)
         elif succession == None and filename != "" and filename.endswith(".xes"):
             trace = self.get_trace_from_xes(filename)
             events = self.get_events_from_xes(filename)
             direct_succession = self.get_direct_succession(trace, events)
-        elif succession != None and filename == "":
-            direct_succession = succession
+# =============================================================================
+#         elif succession != None and filename == "":
+#             direct_succession = succession
+# =============================================================================
         else:
             print("Provide direct succession or csv/xes file!")
-            return
-
-        print(trace)
-        print(events)
+            return 1
+        
+        if not direct_succession:
+            print("Empty model")
+            self.draw(model_name, prog='dot')
+            return max(direct_succession_count.values())+1
 
         # getting start set events
         start_set_events = self.get_start_set_events(direct_succession)
@@ -353,7 +392,7 @@ class MyGraph(pgv.AGraph):
         edges = self.get_edges(direct_succession, parallel_events, causality, inv_causality, end_set_events)
 
         # print relations
-        self.print_relations(direct_succession, start_set_events, causality, inv_causality, parallel_events, end_set_events, edges)
+        #self.print_relations(direct_succession, start_set_events, causality, inv_causality, parallel_events, end_set_events, edges)
 
         # adding start event
         self.add_event("start")
@@ -467,3 +506,5 @@ class MyGraph(pgv.AGraph):
 
         self.draw(model_name, prog='dot')
         display(Image(model_name))
+        
+        return max(direct_succession_count.values())+1

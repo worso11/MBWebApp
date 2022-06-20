@@ -43,21 +43,30 @@ def upload_image():
         G = myGraph.MyGraph()
         model_filename = os.path.join('static', filename)
         image_filename = os.path.join('static', "simple_process_model.png")
-        G.create_and_display_graph(image_filename, filename=model_filename)
+        maxSlider = G.create_and_display_graph(image_filename, filename=model_filename)
         
-        return render_template('upload.html', filename=image_filename)
+        return render_template('upload.html', filename=image_filename, sliderValue=0, sliderValue2=0, maxSlider=maxSlider)
     else:
         flash('Allowed image types are -> csv, xes')
         return redirect(request.url)
         
 @app.route('/filtered', methods=['POST'])
 def filter_model():
+    lower_filter = int(request.form["lowerFilter"])
+    upper_filter = int(request.form["upperFilter"])
+    
+    if (upper_filter == 0):
+        upper_filter = float('inf')
+    
     G = myGraph.MyGraph()
     model_filename = os.path.join('static', "simple_process_model." + FILE_TYPE)
     image_filename = os.path.join('static', "simple_process_model.png")
-    G.create_and_display_graph(image_filename, filename=model_filename)
+    maxSlider = G.create_and_display_graph(image_filename, filename=model_filename, lowerbound=lower_filter, upperbound=upper_filter)
     
-    return render_template('upload.html', filename=image_filename)
+    if (upper_filter == float('inf')):
+        upper_filter = 0
+    
+    return render_template('upload.html', filename=image_filename, sliderValue=lower_filter, sliderValue2=upper_filter, maxSlider=maxSlider)
     
 
 @app.after_request
