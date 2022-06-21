@@ -1,5 +1,6 @@
 import os
 import myGraph
+import pandas as pd
 from flask import Flask, flash, request, redirect, render_template
 from werkzeug.utils import secure_filename
 
@@ -40,6 +41,9 @@ def upload_image():
         file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
         flash('Model successfully uploaded and displayed below')
         
+        if filename.endswith('.csv'):
+            return detect_csv_cols()
+        
         G = myGraph.MyGraph()
         model_filename = os.path.join('static', filename)
         image_filename = os.path.join('static', "simple_process_model.png")
@@ -49,6 +53,41 @@ def upload_image():
     else:
         flash('Allowed image types are -> csv, xes')
         return redirect(request.url)
+    
+def detect_csv_cols():
+    filename = os.path.join('static', 'simple_process_model.csv')
+    image_filename = os.path.join('static', "simple_process_model.png")
+    
+    df = pd.read_csv(filename)
+    
+    # if columns we need are already there, we just skip the config and use them
+    if set(['Case ID', 'Activity', 'Start Timestamp']).issubset(set(df.columns.values)):
+        df = pd.read_csv(filename, sep=',', usecols=['Case ID','Activity','Start Timestamp'])
+        df.to_csv(filename)
+        return render_template('upload.html', filename=image_filename, sliderValue=0, sliderValue2=0)#, maxSlider=maxSlider)
+    # if not, we move to specify which columns contain caseID, activity and timestamp
+    else:
+        return render_template('csv_config.html')
+
+
+@app.route('/config', methods=['POST'])
+def config_csv():
+    filename = os.path.join('static', 'simple_process_model.csv')
+    image_filename = os.path.join('static', "simple_process_model.png")
+    
+    caseId = request.form.get('caseId')
+    activity = request.form.get('activity')
+    timestamp = request.form.get('timestamp')
+    
+    try:
+        df = pd.read_csv(filename, sep=',', usecols = [int(caseId), int(activity), int(timestamp)], 
+                         names=['Case ID', 'Activity', 'Start Timestamp'], header=0, skiprows=1)
+    except(ValueError):
+        return render_template('csv_config.html')
+    
+    df.to_csv(filename)
+    
+    return render_template('upload.html', filename=image_filename, sliderValue=0, sliderValue2=0)# maxSlider=maxSlider)
         
 @app.route('/filtered', methods=['POST'])
 def filter_model():
@@ -59,11 +98,11 @@ def filter_model():
         upper_filter = float('inf')
     
     G = myGraph.MyGraph()
+    if (upper_filter == float('inf')):
     model_filename = os.path.join('static', "simple_process_model." + FILE_TYPE)
     image_filename = os.path.join('static', "simple_process_model.png")
     maxSlider = G.create_and_display_graph(image_filename, filename=model_filename, lowerbound=lower_filter, upperbound=upper_filter)
     
-    if (upper_filter == float('inf')):
         upper_filter = 0
     
     return render_template('upload.html', filename=image_filename, sliderValue=lower_filter, sliderValue2=upper_filter, maxSlider=maxSlider)
