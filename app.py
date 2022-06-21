@@ -1,5 +1,6 @@
 import os
 import myGraph
+import numpy as np
 import pandas as pd
 from flask import Flask, flash, request, redirect, render_template
 from werkzeug.utils import secure_filename
@@ -77,11 +78,18 @@ def config_csv():
     caseId = request.form.get('caseId')
     activity = request.form.get('activity')
     timestamp = request.form.get('timestamp')
+    headers = {
+        'Case ID' : caseId,
+        'Activity' : activity,
+        'Start Timestamp' : timestamp
+        }
+    
+    headers = {k: v for k, v in sorted(headers.items(), key=lambda item: item[1])}
     
     try:
         df = pd.read_csv(model_filename, sep=',', 
-                         usecols = [int(caseId), int(activity), int(timestamp)], 
-                         names = ['Case ID', 'Activity', 'Start Timestamp'], 
+                         usecols = np.fromiter(headers.values(), dtype=int), 
+                         names = np.array(list(headers.keys())), 
                          header=None, skiprows=1)
     except(ValueError):
         return render_template('csv_config.html')
