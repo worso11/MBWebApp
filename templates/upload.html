@@ -56,6 +56,18 @@
           <input type="range" min="0" max="{{ maxSlider }}" value="{{ sliderValue2 }}"
                           class="myslider" id="sliderUpper" name="upperFilter">
           <p>Value: <span id="slider2"></span></p>
+        </div>
+        <div class="upperslider">
+          <p>Minimum trace length (0 means it is inactive):</p>
+          <input type="range" min="0" max="{{ maxSlider2 }}" value="{{ sliderValue3 }}"
+                          class="myslider" id="lengthMin" name="lengthMinFilter">
+          <p>Value: <span id="slider3"></span></p>
+        </div>
+        <div class="upperslider">
+          <p>Maximum trace length (0 means it is inactive):</p>
+          <input type="range" min="0" max="{{ maxSlider2 }}" value="{{ sliderValue4 }}"
+                          class="myslider" id="lengthMax" name="lengthMaxFilter">
+          <p>Value: <span id="slider4"></span></p>
           <input type="submit" value="Filter">
         </div>
     </form>
@@ -80,6 +92,26 @@
       
     rangeslider2.oninput = function() {
       output2.innerHTML = this.value;
+    }
+    </script>
+    
+    <script>
+    var rangeslider3 = document.getElementById("lengthMin");
+    var output3 = document.getElementById("slider3");
+    output3.innerHTML = rangeslider3.value;
+      
+    rangeslider3.oninput = function() {
+      output3.innerHTML = this.value;
+    }
+    </script>
+    
+    <script>
+    var rangeslider4 = document.getElementById("lengthMax");
+    var output4 = document.getElementById("slider4");
+    output4.innerHTML = rangeslider4.value;
+      
+    rangeslider4.oninput = function() {
+      output4.innerHTML = this.value;
     }
     </script>
 	

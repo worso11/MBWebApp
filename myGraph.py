@@ -116,6 +116,14 @@ class MyGraph(pgv.AGraph):
                 trace[i] = None
         return trace
     
+    def filter_trace_length(self, trace, direct_succession_count, min_len, max_len):
+        for i, case in enumerate(trace):
+            if (case == None):
+                continue
+            if (len(case) > max_len or len(case) < min_len):
+                trace[i] = None
+        return trace
+    
     def remove_filtered_events(self, events, trace):
         for i, event in enumerate(events):
             exists = False
@@ -128,6 +136,13 @@ class MyGraph(pgv.AGraph):
             if not exists:
                 events[i] = None
 
+    def get_max_trace(self, trace):
+        max_len = 0
+        for case in trace:
+            if len(case) > max_len:
+                max_len = len(case)
+        return max_len
+                
     def add_edge(self, source, target):
         super(MyGraph, self).add_edge(source, target)
 
@@ -341,23 +356,13 @@ class MyGraph(pgv.AGraph):
 
       return
 
-    def create_and_display_graph(self, model_name, filename="", succession=None, lowerbound=0, upperbound=float('inf')):
+    def create_and_display_graph(self, model_name, filename="", succession=None, lowerbound=0, upperbound=float('inf'), min_len=0, max_len=float('inf')):
         if succession == None and filename != "" and filename.endswith(".csv"):
             trace = self.get_trace_from_csv(filename)
             events = self.get_events_from_csv(filename)
-            direct_succession_count = self.get_direct_succession_count(trace)
-            self.filter_trace_lowerbound(trace, direct_succession_count, lowerbound)
-            self.filter_trace_upperbound(trace, direct_succession_count, upperbound)
-            self.remove_filtered_events(events, trace)
-            direct_succession = self.get_direct_succession(trace, events)
         elif succession == None and filename != "" and filename.endswith(".xes"):
             trace = self.get_trace_from_xes(filename)
             events = self.get_events_from_xes(filename)
-            direct_succession_count = self.get_direct_succession_count(trace)
-            self.filter_trace_lowerbound(trace, direct_succession_count, lowerbound)
-            self.filter_trace_upperbound(trace, direct_succession_count, upperbound)
-            self.remove_filtered_events(events, trace)
-            direct_succession = self.get_direct_succession(trace, events)
 # =============================================================================
 #         elif succession != None and filename == "":
 #             direct_succession = succession
@@ -366,10 +371,18 @@ class MyGraph(pgv.AGraph):
             print("Provide direct succession or csv/xes file!")
             return 1
         
+        max_trace = self.get_max_trace(trace)
+        direct_succession_count = self.get_direct_succession_count(trace)
+        self.filter_trace_lowerbound(trace, direct_succession_count, lowerbound)
+        self.filter_trace_upperbound(trace, direct_succession_count, upperbound)
+        self.filter_trace_length(trace, direct_succession_count, min_len, max_len)
+        self.remove_filtered_events(events, trace)
+        direct_succession = self.get_direct_succession(trace, events)
+        
         if not direct_succession:
             print("Empty model")
             self.draw(model_name, prog='dot')
-            return max(direct_succession_count.values())+1
+            return max(direct_succession_count.values())+1, max_trace
 
         # getting start set events
         start_set_events = self.get_start_set_events(direct_succession)
@@ -511,4 +524,4 @@ class MyGraph(pgv.AGraph):
         self.draw(model_name, prog='dot')
         display(Image(model_name))
         
-        return max(direct_succession_count.values())+1
+        return max(direct_succession_count.values())+1, max_trace
