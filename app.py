@@ -62,7 +62,7 @@ def detect_csv_cols():
     # if columns we need are already there, we just skip the config and use them
     if set(['Case ID', 'Activity', 'Start Timestamp']).issubset(set(df.columns.values)):
         df = pd.read_csv(filename, sep=',', usecols=['Case ID','Activity','Start Timestamp'])
-        df.to_csv(filename)
+        df.to_csv(filename, index=False)
         return False
     # if not, we move to specify which columns contain caseID, activity and timestamp
     else:
@@ -79,8 +79,10 @@ def config_csv():
     timestamp = request.form.get('timestamp')
     
     try:
-        df = pd.read_csv(model_filename, sep=',', usecols = [int(caseId), int(activity), int(timestamp)], 
-                         names=['Case ID', 'Activity', 'Start Timestamp'], header=0, skiprows=1)
+        df = pd.read_csv(model_filename, sep=',', 
+                         usecols = [int(caseId), int(activity), int(timestamp)], 
+                         names = ['Case ID', 'Activity', 'Start Timestamp'], 
+                         header=None, skiprows=1)
     except(ValueError):
         return render_template('csv_config.html')
     
