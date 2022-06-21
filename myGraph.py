@@ -353,6 +353,10 @@ class MyGraph(pgv.AGraph):
         elif succession == None and filename != "" and filename.endswith(".xes"):
             trace = self.get_trace_from_xes(filename)
             events = self.get_events_from_xes(filename)
+            direct_succession_count = self.get_direct_succession_count(trace)
+            self.filter_trace_lowerbound(trace, direct_succession_count, lowerbound)
+            self.filter_trace_upperbound(trace, direct_succession_count, upperbound)
+            self.remove_filtered_events(events, trace)
             direct_succession = self.get_direct_succession(trace, events)
 # =============================================================================
 #         elif succession != None and filename == "":
